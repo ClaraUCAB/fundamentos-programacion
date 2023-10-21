@@ -7,7 +7,7 @@ Proceso NumerosPrimos
 	primo <- Verdadero;
 
     // Le solicitamos un número entero al usuario
-    Escribir "Por favor, ingrese un número: ";
+    Escribir "Por favor, ingrese un numero: ";
     Leer num;
 
     // Primero podemos descartar todos los números que no sean mayores a 1
@@ -38,8 +38,8 @@ Proceso NumerosPrimos
 	
 	// Imprimimos el resultado
 	Si primo
-		Escribir "El número ", num, " sí es primo.";
+		Escribir "El numero ", num, " si es primo.";
 	SiNo
-		Escribir "El número ", num, " no es primo.";
+		Escribir "El numero ", num, " no es primo.";
 	FinSi
 FinProceso
