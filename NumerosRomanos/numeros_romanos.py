@@ -1,7 +1,7 @@
 # Programa que convierte números romanos a números arábigos
 def numeros_romanos():
     # Le solicitamos la entrada en romano al usuario
-    romanos = input("Ingrese una cifra en números romanos: ")
+    romanos = input("Ingrese una cifra en números romanos: ").upper()
 
     numero_previo = 0
     resultado = 0
