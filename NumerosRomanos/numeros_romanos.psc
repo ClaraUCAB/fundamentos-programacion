@@ -4,7 +4,7 @@ Proceso NumerosRomanos
     Definir romanos como Cadena;
     Definir numeroPrevio, resultado, i como Entero;
 	
-	// Inicializamos las variables numéricas antes de usarlas para evitarnos problemas
+	// Inicializamos las variables numericas antes de usarlas para evitarnos problemas
 	resultado <- 0;
 	numeroPrevio <- 0;
 	
@@ -28,7 +28,7 @@ Proceso NumerosRomanos
                 Si numeroPrevio = 1 Entonces
 	                // I puede ser usado antes de V para escribir 4.
 		            // De esa forma, solo tenemos que sumar 3 para llegar al 4
-			        // ya que 1 ya fue sumado en la iteración anterior que era I.
+			        // ya que 1 ya fue sumado en la iteracion anterior que era I.
 			        resultado <- resultado + 3;
 		        SiNo
 			        resultado <- resultado + 5;
@@ -39,7 +39,7 @@ Proceso NumerosRomanos
 		        Si numeroPrevio = 1 Entonces
 			        // I puede ser usado antes de X para escribir 9.
 				    // De esa forma, solo tenemos que sumar 8 para llegar al 9
-                    // ya que 1 ya fue sumado en la iteración anterior que era I.
+                    // ya que 1 ya fue sumado en la iteracion anterior que era I.
                     resultado <- resultado + 8;
                 SiNo
                     resultado <- resultado + 10;
@@ -50,7 +50,7 @@ Proceso NumerosRomanos
                 Si numeroPrevio = 10 Entonces
                     // X puede ser usado antes de L para escribir 40.
 					// De esa forma, solo tenemos que sumar 30 para llegar al 40
-					// ya que 10 ya fue sumado en la iteración anterior que era X.
+					// ya que 10 ya fue sumado en la iteracion anterior que era X.
 					resultado <- resultado + 30;
 				SiNo
 					resultado <- resultado + 50;
@@ -61,7 +61,7 @@ Proceso NumerosRomanos
                 Si numeroPrevio = 10 Entonces
                     // X puede ser usado antes de C para escribir 90.
                     // De esa forma, solo tenemos que sumar 80 para llegar al 90
-                    // ya que 10 ya fue sumado en la iteración anterior que era X.
+                    // ya que 10 ya fue sumado en la iteracion anterior que era X.
                     resultado <- resultado + 80;
                 SiNo
                     resultado <- resultado + 100
@@ -72,7 +72,7 @@ Proceso NumerosRomanos
                 Si numeroPrevio = 100 Entonces
                     // C puede ser usado antes de D para escribir 400.
                     // De esa forma, solo tenemos que sumar 300 para llegar al 400
-                    // ya que 100 ya fue sumado en la iteración anterior que era C.
+                    // ya que 100 ya fue sumado en la iteracion anterior que era C.
                     resultado <- resultado + 300;
                 SiNo
                     resultado <- resultado + 500;
@@ -83,7 +83,7 @@ Proceso NumerosRomanos
                 Si numeroPrevio = 100 Entonces
                     // C puede ser usado antes de M para escribir 900.
                     // De esa forma, solo tenemos que sumar 800 para llegar al 900
-                    // ya que 100 ya fue sumado en la iteración anterior que era C.
+                    // ya que 100 ya fue sumado en la iteracion anterior que era C.
                     resultado <- resultado + 800;
                 SiNo
                     resultado <- resultado + 1000;
@@ -91,7 +91,7 @@ Proceso NumerosRomanos
                 numeroPrevio <- 1000;
 				
             De Otro Modo:
-                // Si el usuario ha ingresado un caracter inválido,
+                // Si el usuario ha ingresado un caracter invalido,
                 // abortamos todas las operaciones y le asignamos
                 // al resultado el error para imprimirlo.
 				// Esto tambien atrapa el caso en el que el usuario no haya ingresado nada.	
