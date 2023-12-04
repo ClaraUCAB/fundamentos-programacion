@@ -121,7 +121,7 @@ def tic_tac_toe():
             continue
 
         # Verificamos si la casilla ya estaba ocupada
-        if posiciones[(columna * 3) + fila] != " ":
+        if posiciones[coords(columna, fila)] != " ":
             # El jugador ha tratado de jugar en una casilla ya usada.
             # Le avisamos y le pedimos que introduzca otra distinta,
             # pero no nos saltamos su turno.
@@ -130,7 +130,7 @@ def tic_tac_toe():
             continue
 
         # Insertamos el movimiento del jugador en las posiciones
-        posiciones[(columna * 3) + fila] = jugador
+        posiciones[coords(columna, fila)] = jugador
 
         # Invertimos el valor de verdad de la variable que rastrea el turno
         # para pasarle el turno al jugador opuesto al actual.
