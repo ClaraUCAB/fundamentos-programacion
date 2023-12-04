@@ -24,6 +24,31 @@ SubProceso ImprimirTablero(posiciones)
 FinSubProceso
 
 
+// Funcion que toma una cadena y reemplaza cada instancia de una subcadena por otra
+// Basicamente el .replace de Python
+SubProceso nuevo<-Remplazar(original, substr, reemplazo)
+	Definir i, originalLen, substrLen Como Entero;
+	
+	originalLen <- Longitud(original);
+	substrLen <- Longitud(substr);
+	
+	nuevo <- "";
+	
+	Para i<-1 Hasta originalLen Hacer
+		Si i + substrLen <= originalLen Entonces
+			Si Subcadena(original, i, i+substrLen-1) = substr Entonces
+				nuevo <- Concatenar(nuevo, reemplazo);
+				i <- i + substrLen - 1;
+			SiNo
+				nuevo <- Concatenar(nuevo, Subcadena(original, i, i));
+			FinSi
+		SiNo
+			nuevo <- Concatenar(nuevo, Subcadena(original, i, i));
+		FinSi
+	FinPara
+FinSubProceso
+
+
 // Convierte coordenadas (X, Y) en un indice de un arreglo unidimensional
 // Aqui me encantaria poder asumir que el numero de columnas es 3 por el juego,
 // pero no puedo porque esto es pseudocodigo y no Python. Diablos.
@@ -137,10 +162,15 @@ Algoritmo TicTacToe
             Escribir "Turno del jugador ", jugador, ". Elige una posicion (1-3, 1-3): ";
 			Leer movimiento;
 
-            // Jesucristo sabe que no pienso sanitizar el input en pseudocodigo de PSeInt.
-			// Este programa no atrapara los casos donde hayan espacios en blanco o excesos (una coordenada de mas de 2 elementos),
-			// o casos donde el usuario ingrese valores no numericos. Basicamente solo "x,y".
+			// Sanitizamos un poquito el input
+			movimiento <- Remplazar(movimiento, " ", "");	// Removemos espacios en blanco
 			
+			// Este programa ignorara los excesos (osea, poner una coordenada de mas de 2 elementos como x,yyy,zzz).
+			// Este programa no va a atrapar casos donde el usuario ingrese valores no numericos o
+			// coordenadas rotas (Osea, cualquier cosa que no sea (x,y) con espacios en blanco).
+			// Significa que tampoco atrapara casos en los que el usuario ingrese coordenadas de mas de 1 digito.
+			// Jesucristo sabe que no pienso matarme sanitizando el input en pseudocodigo de PSeInt.
+			Escribir movimiento;
 			fila <- ConvertirANumero(Subcadena(movimiento, 1, 1));
 			columna <- ConvertirANumero(Subcadena(movimiento, 3, 3));
 
@@ -175,7 +205,6 @@ Algoritmo TicTacToe
 		FinSi
 	FinMientras
 	
-
 	// El juego ha terminado. Verificamos el ganador
 	// Coloco este chequeo al final del juego despues del loop para que no se tenga
 	// que revisar en cada iteracion, sino 1 sola vez al final de la partida.
