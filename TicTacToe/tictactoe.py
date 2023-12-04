@@ -38,23 +38,23 @@ def comprobar_ganador(posiciones: list):
     # Primero comprobamos si hay 3 continuas horizontales
     for i in range(0, 3):
         if posiciones[coords(0, i)] == posiciones[coords(1, i)] == posiciones[coords(2, i)] and posiciones[coords(0, i)] != " ":
-            # Alguien ganó en horizontal. Comprobamos quién fue
+            # Alguien ganó en horizontal. Devolvemos el que fue
             return posiciones[coords(0, i)]
 
     # Luego comprobamos si hay 3 continuas verticales
     for i in range(0, 3):
         if posiciones[coords(i, 0)] == posiciones[coords(i, 1)] == posiciones[coords(i, 2)] and posiciones[coords(i, 0)] != " ":
-            # Alguien ganó en vertical. Comprobamos quién fue
+            # Alguien ganó en vertical. Devolvemos el que fue
             return posiciones[coords(i, 0)]
 
     # Luego comprobamos si hay 3 continuas en la diagonal izquierda-derecha
     if posiciones[0] == posiciones[4] == posiciones[8] and posiciones[0] != " ":
-        # Alguien ganó en diagonal izquierda-derecha. Comprobamos quién fue
+        # Alguien ganó en diagonal izquierda-derecha. Devolvemos el que fue
         return posiciones[0]
 
     # Luego comprobamos si hay 3 continuas en la diagonal derecha-izquierda
     if posiciones[2] == posiciones[4] == posiciones[6] and posiciones[2] != " ":
-        # Alguien ganó en diagonal derecha-izquierda. Comprobamos quién fue
+        # Alguien ganó en diagonal derecha-izquierda. Devolvemos el que fue
         return posiciones[2]
 
     # Si ninguno de los dos ha ganado pero YA NO hay casillas disponibles, entonces el juego termina en empate.
