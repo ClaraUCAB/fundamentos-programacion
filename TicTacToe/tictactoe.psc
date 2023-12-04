@@ -1,6 +1,4 @@
 // Juego de Tic Tac Toe con dos jugadores humanos
-// Lamento profundamente lo que sus ojos estan a punto de presenciar.
-// Este codigo es la maxima expresion de lobotomia y perdida de la cordura.
 
 // Imprimir un tablero de TicTacToe dadas las posiciones
 SubProceso ImprimirTablero(posiciones)
@@ -50,9 +48,6 @@ FinSubProceso
 
 
 // Convierte coordenadas (X, Y) en un indice de un arreglo unidimensional
-// Aqui me encantaria poder asumir que el numero de columnas es 3 por el juego,
-// pero no puedo porque esto es pseudocodigo y no Python. Diablos.
-// Jesucristo. "Y" es una keyword reservada en PSeInt. Me voy a matar.
 Funcion c<-Coordenadas(x, _y, columnas)
 	x <- x - 1;
 	_y <- _y - 1;
@@ -175,7 +170,6 @@ Algoritmo TicTacToe
 			columna <- ConvertirANumero(Subcadena(movimiento, 3, 3));
 
             // Verificamos si las coordenadas ingresadas son validas (estan entre 1 y 3)
-			// Esto ya es demasiado pedir dios santo odio pseudocodigo no puedo ni poner acentos.
 			Si NO (1 <= fila Y fila <= 3) O NO (1 <= columna Y columna <= 3) Entonces
                 // El jugador introdujo coordenadas o muy chiquitas o muy grandes.
                 // Le pedimos que las introduzca de nuevo sin saltarnos su turno.
@@ -216,7 +210,4 @@ Algoritmo TicTacToe
 		Escribir "¡El juego ha terminado en empate!";
 	FinSi
 FinAlgoritmo
-
-// Odio pseudocodigo. Esto fue espantoso.
-// No habia excusa para complicarme de esta forma
 
