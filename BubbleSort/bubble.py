@@ -47,6 +47,10 @@ def main():
     # Convertimos la lectura como string a una lista
     lista = lista.strip().split('\n')
 
+    # Ahora tenemos una lista de strings
+    # Vamos a convertir todos los elementos a enteros
+    lista = [int(i) for i in lista]
+
     # Sorteamos la lista a través de Bubble Sort
     lista = bubble(lista)
 
