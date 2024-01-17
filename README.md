@@ -15,10 +15,14 @@ Este repositorio contiene todas las actividades, talleres y proyectos realizados
 ### 4. [Tic Tac Toe](https://github.com/ClaraUCAB/fundamentos-programacion/tree/main/TicTacToe)
 ### 5. [Bubble Sort](https://github.com/ClaraUCAB/fundamentos-programacion/tree/main/BubbleSort)
 
+<br>
+
 ## Talleres
 ### 1. Imprimir un Tablero de Ajedrez
 ### 2. Juego de Ahorcado
 ### 3. Juego de 2048 de 1 Fila
+
+<br>
 
 ## Proyecto Final
 ### [Juego de 2N¹⁰](https://github.com/ClaraUCAB/fundamentos-programacion/tree/main/N210)
