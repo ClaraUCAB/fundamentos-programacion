@@ -1,0 +1,5 @@
+console==0.9907
+ezenv==0.92
+pyfiglet==1.0.2
+setuptools==65.5.1
+wheel==0.38.4
